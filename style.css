@@ -1,0 +1,93 @@
+/* General */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Poppins',sans-serif; line-height:1.6; color:#333; background:#f5f7fa;}
+.container {width:90%; max-width:1100px; margin:auto;}
+h1,h2{text-align:center;margin-bottom:1rem;font-weight:700;}
+.section{padding:4rem 0;}
+
+/* Navbar */
+.navbar {
+  display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem;
+  background:#0a66c2; color:#fff; position:sticky; top:0; z-index:100;
+}
+.navbar .logo{font-weight:700; font-size:1.2rem;}
+.nav-links {list-style:none; display:flex; gap:1.5rem;}
+.nav-links a {color:#fff; text-decoration:none; font-weight:500;}
+.nav-links a:hover{text-decoration:underline;}
+.theme-btn{background:none;border:none;color:#fff;font-size:1.3rem;cursor:pointer;}
+
+/* Hero */
+.hero {
+  height:80vh;
+  background: linear-gradient(to right, #0a66c2, #004182);
+  display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding:2rem;
+}
+.hero h1{font-size:2.5rem; margin-bottom:1rem;}
+.hero p{margin-bottom:1.5rem; font-size:1.1rem;}
+
+/* Buttons */
+.btn-primary{
+  background:#ffb703; color:#fff; padding:0.8rem 1.5rem; border-radius:8px; font-weight:600;
+  text-decoration:none; box-shadow:0 4px 8px rgba(0,0,0,0.2); transition:all 0.3s;
+}
+.btn-primary:hover{background:#fb8500; transform:translateY(-2px);}
+
+/* Benefits */
+.benefit-cards{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:2rem;
+}
+.card{
+  background:#fff; padding:1.5rem; border-radius:10px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  transition:transform 0.3s ease;
+}
+.card:hover{transform:translateY(-5px);}
+
+/* Testimonials */
+.testimonial-cards{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; margin-top:2rem;
+}
+.testimonial{
+  background:#fff; padding:1.5rem; border-radius:10px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.testimonial img{border-radius:50%; margin-bottom:1rem; width:80px; height:80px;}
+
+/* FAQ */
+.faq-item{margin-bottom:1rem;}
+.faq-question{
+  width:100%; padding:1rem; background:#0a66c2; color:#fff; border:none; text-align:left; cursor:pointer; font-weight:600; border-radius:8px;
+}
+.faq-answer{display:none; background:#fff; padding:1rem; border-radius:8px; margin-top:0.5rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+
+/* CTA */
+.cta{text-align:center; background:#004182; color:#fff; padding:3rem 1rem; border-radius:10px; margin-top:2rem;}
+.cta .btn-primary{margin-top:1rem;}
+
+/* Footer */
+footer{text-align:center; padding:1rem; background:#0a66c2; color:#fff; font-weight:500;}
+
+/* Back to Top */
+#backToTop{
+  position:fixed; bottom:20px; right:20px; padding:0.7rem 1rem; border:none; border-radius:50%; background:#ffb703; color:#fff; font-size:1.2rem; cursor:pointer; display:none; box-shadow:0 4px 6px rgba(0,0,0,0.2);
+}
+#backToTop:hover{background:#fb8500;}
+
+/* Fade-in */
+.fade-in {opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease;}
+.fade-in.show {opacity: 1; transform: translateY(0);}
+
+/* Dark Mode */
+body.dark {background:#121212; color:#e0e0e0;}
+body.dark .navbar {background:#1e1e1e;}
+body.dark .nav-links a {color:#e0e0e0;}
+body.dark .hero {background: linear-gradient(to right, #0d47a1, #002171);}
+body.dark .card, body.dark .testimonial, body.dark .faq-answer, body.dark .cta {background:#1e1e1e; color:#e0e0e0; box-shadow:0 2px 8px rgba(0,0,0,0.5);}
+body.dark .btn-primary {background:#ffb703; color:#121212;}
+body.dark .btn-primary:hover {background:#fb8500;}
+body.dark footer {background:#1e1e1e; color:#e0e0e0;}
+body.dark #backToTop {background:#ffb703; color:#121212;}
+
+/* Responsive */
+@media (max-width:768px){
+  .hero h1{font-size:2rem;}
+  .nav-links{flex-wrap:wrap; gap:1rem;}
+}
